@@ -1,0 +1,15 @@
+Equipment Name,Type,Flowrate,Pressure,Temperature
+Pump-01,Pump,150.5,10.5,45.2
+Pump-02,Pump,200.3,12.0,48.5
+Compressor-01,Compressor,300.0,8.5,35.0
+Compressor-02,Compressor,275.5,9.2,38.5
+Heat Exchanger-01,Heat Exchanger,500.0,6.0,65.5
+Heat Exchanger-02,Heat Exchanger,480.5,6.5,68.0
+Reactor-01,Reactor,100.0,15.0,80.0
+Reactor-02,Reactor,120.5,16.5,85.5
+Separator-01,Separator,250.0,7.5,55.0
+Separator-02,Separator,280.5,8.0,58.5
+Column-01,Column,350.0,5.0,90.0
+Column-02,Column,320.5,5.5,92.5
+Other-01,Other,150.0,10.0,50.0
+Other-02,Other,175.5,11.0,52.5
