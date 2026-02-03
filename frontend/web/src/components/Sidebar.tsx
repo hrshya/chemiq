@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { BarChart3, Database, Upload, Zap, TrendingUp } from 'lucide-react'

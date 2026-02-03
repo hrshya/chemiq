@@ -66,7 +66,6 @@ const Upload = () => {
       const { data } = await datasetAPI.uploadCSV(file)
       setSuccess(`✅ Successfully uploaded ${file.name}! (${data.dataset.equipment_count} equipment records)`)
       setFile(null)
-      setProgress(0)
       fileInput.current.value = ''
 
       setTimeout(() => {

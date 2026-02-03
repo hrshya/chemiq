@@ -1,4 +1,3 @@
-import React from 'react'
 import { cn } from '@/lib/utils'
 
 export const Button = ({ children, className='', variant='default', ...props }: any) => {
