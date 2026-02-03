@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { datasetAPI } from '../services/api'
 
@@ -7,7 +7,6 @@ const Upload = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
-  const [progress, setProgress] = useState(0)
   const fileInput = useRef<any>(null)
   const navigate = useNavigate()
 

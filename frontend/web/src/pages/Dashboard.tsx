@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { analyticsAPI, datasetAPI } from '../services/api'
-import { Line, Bar, Doughnut } from 'react-chartjs-2'
+import { useState, useEffect } from 'react'
+import { analyticsAPI } from '../services/api'
+import { Bar, Doughnut } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -30,7 +30,6 @@ ChartJS.register(
 const Dashboard = () => {
   const [summary, setSummary] = useState<any>(null)
   const [loading, setLoading] = useState<any>(true)
-  const [error, setError] = useState('')
 
   useEffect(() => {
     fetchSummary()
@@ -41,7 +40,7 @@ const Dashboard = () => {
       const { data } = await analyticsAPI.getSummary()
       setSummary(data)
     } catch (err) {
-      setError('Failed to load summary')
+      console.error('Failed to load summary', err)
     } finally {
       setLoading(false)
     }

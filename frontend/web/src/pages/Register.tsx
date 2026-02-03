@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { authAPI } from '../services/api'
 import { useAuth } from '../context/AuthContext'
@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { User, Mail, Lock, AlertCircle, UserCheck, LogIn } from 'lucide-react'
+import { AlertCircle } from 'lucide-react'
 
 const Register = () => {
   const [username, setUsername] = useState('')

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { datasetAPI } from '../services/api'
 // migrated to Tailwind via src/index.css
 
 const Datasets = () => {
   const [datasets, setDatasets] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
   const [expandedId, setExpandedId] = useState(null)
 
   useEffect(() => {
@@ -17,7 +16,7 @@ const Datasets = () => {
       const { data } = await datasetAPI.list()
       setDatasets(data.results || [])
     } catch (err) {
-      setError('Failed to load datasets')
+      console.error('Failed to load datasets', err)
     } finally {
       setLoading(false)
     }

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { equipmentAPI } from '../services/api'
 
 const Equipment = () => {
   const [equipment, setEquipment] = useState<any[]>([])
   const [loading, setLoading] = useState<any>(true)
-  const [error, setError] = useState('')
   const [filters, setFilters] = useState({
     type: 'all',
     sortBy: 'name'
@@ -19,7 +18,7 @@ const Equipment = () => {
       const { data } = await equipmentAPI.list()
       setEquipment(data.results || [])
     } catch (err) {
-      setError('Failed to load equipment')
+      console.error('Failed to load equipment', err)
     } finally {
       setLoading(false)
     }
